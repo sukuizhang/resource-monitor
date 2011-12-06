@@ -1,6 +1,8 @@
 (ns resource-monitor.visitor
   (:import [java.io FileInputStream InputStreamReader BufferedReader]))
 
+(defn visit-file [resource f] (f (:path resource)))
+
 (defn visit-all [resource f]
   (let [path (:path resource)
         text (slurp path)]
@@ -19,4 +21,6 @@
             (recur (.readLine in))))))))
 
 (defn visitor []
-  {:visit-all visit-all :visit-line visit-line})
+  {:visit-file visit-file
+   :visit-all visit-all
+   :visit-line visit-line})
