@@ -10,7 +10,7 @@
   <scm>
     <connection>scm:git:git://github.com/sukuizhang/resource-monitor.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/sukuizhang/resource-monitor.git</developerConnection>
-    <tag>7aee730b45832d002997fc8ae25b5814f6ffaab7</tag>
+    <tag>1387d0a29a127ccfa74f90bcf47486284a94e3a6</tag>
     <url>https://github.com/sukuizhang/resource-monitor</url>
   </scm>
   <build>

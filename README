@@ -1,13 +1,31 @@
-# resource-monitor
+resource-monitor
 
-FIXME: write description
+monitor file resource change
 
-## Usage
+Usage
+1.add dependency [resource-monitor "0.0.1"] to your project.clj.
 
-FIXME: write
+2.add (:require [resource-monitor.core :as monitor]) to your unit.
 
-## License
+3.write your function to response to the resource change.
+   in these version, we has three type response functions.
+:visit-file 
+    your function like (f file-name).
+           file-name is the file name of modified file.
+:visit-all
+    your function like (f resource file-content)
+           resource contains monitor file and your listeners messages.
+           file-content is content of monitor file.
 
-Copyright (C) 2011 FIXME
+:visit-line
+    your function like (f resource line)
+          resource like preview.
+          line is a line of file content.
 
-Distributed under the Eclipse Public License, the same as Clojure.
+  As you know, :visit-file and :visit-all functions will be invoke once when file resource changed, and :visit-line will be invoke line by line.
+
+4.install your monitor.
+  invoke (monitor/monitor resource-name resource-file-name your-listeners)
+         resource-name: resource name, must be unique.
+         resource-file-name: be monitor file name.
+         listeners: a map contains pair of listener type and listeners vector, listener type is descript preview, :visite-file,:visite-all and :visit-line is now support.
