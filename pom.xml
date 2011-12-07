@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>resource-monitor</groupId>
   <artifactId>resource-monitor</artifactId>
@@ -9,7 +10,7 @@
   <scm>
     <connection>scm:git:git://github.com/sukuizhang/resource-monitor.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/sukuizhang/resource-monitor.git</developerConnection>
-    <tag>b87ba7a1cc02cd6bd32260c079e39ad1209a1e84</tag>
+    <tag>7aee730b45832d002997fc8ae25b5814f6ffaab7</tag>
     <url>https://github.com/sukuizhang/resource-monitor</url>
   </scm>
   <build>
